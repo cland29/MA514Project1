@@ -1,0 +1,8 @@
+
+
+
+class NewtonMethod{
+    public NewtonMethod(){
+        
+    }
+}

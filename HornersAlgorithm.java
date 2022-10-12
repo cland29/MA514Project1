@@ -1,0 +1,6 @@
+
+class HornersAlgorith{
+    public HornersAlgorith(){
+        
+    }
+}

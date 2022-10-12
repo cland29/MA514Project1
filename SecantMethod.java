@@ -1,0 +1,6 @@
+
+class SecantMethod{
+    public SecantMethod(){
+        
+    }
+}
