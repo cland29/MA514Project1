@@ -1,6 +1,6 @@
 
-class HornersAlgorith{
-    public HornersAlgorith(){
+class HornersAlgorithm{
+    public HornersAlgorithm(){
         
     }
 }
