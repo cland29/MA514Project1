@@ -22,4 +22,13 @@ public class Polynomial {
         
         return sum;
     }
+
+    public Polynomial derivativeFunc(){
+        ArrayList<Double> newCoeffs = new ArrayList<>(coeffs);
+        newCoeffs.remove(0);
+        for (int i = 0; i < newCoeffs.size(); i++){
+            newCoeffs.set(i, newCoeffs.get(i) * (i+1));
+        }
+        return new Polynomial(newCoeffs);
+    }
 }
