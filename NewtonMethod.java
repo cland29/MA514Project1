@@ -1,6 +1,5 @@
 import java.util.function.DoubleFunction;
-import java.util.function.DoubleSupplier;
-import java.util.function.Function;
+
 
 class NewtonMethod{
     DoubleFunction<Double> function, derivative;
@@ -10,7 +9,7 @@ class NewtonMethod{
         this.derivative = derivative;
     }
 
-    public double computeNthIteration(int n, int x0Estimate){
+    public double computeNthIteration(int n, double x0Estimate){
         if (n <= 0){
             return x0Estimate;
         }
