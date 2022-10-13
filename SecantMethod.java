@@ -20,4 +20,16 @@ class SecantMethod{
         double priorTerm = computeNthIteration(n - 1, x0Estimate, x1Estimate);
         return priorTerm - function.apply(priorTerm) * ((priorTerm - doublePriorTerm)/(function.apply(priorTerm) - function.apply(doublePriorTerm)));
     }
+
+    public double computeRoot(double x0Estimate, double x1Estimate, double tolerance){
+        int iteration_count = 0;
+        double computed_iteration = computeNthIteration(iteration_count, x0Estimate, x1Estimate);
+        System.out.println("iteration Step: " + iteration_count + " Computed Result: " + computed_iteration);
+        while (Math.abs(function.apply(computed_iteration)) > tolerance){
+            iteration_count += 1;
+            computed_iteration = computeNthIteration(iteration_count, x0Estimate, x1Estimate);
+            System.out.println("iteration Step: " + iteration_count + " Computed Result: " + computed_iteration);
+        }
+        return computed_iteration;
+    }
 }
