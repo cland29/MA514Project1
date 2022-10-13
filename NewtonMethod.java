@@ -14,6 +14,6 @@ class NewtonMethod{
             return x0Estimate;
         }
         double priorTerm = computeNthIteration(n - 1, x0Estimate);
-        return priorTerm + function.apply(priorTerm) / derivative.apply(priorTerm);
+        return priorTerm - function.apply(priorTerm) / derivative.apply(priorTerm);
     }
 }
