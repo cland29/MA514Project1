@@ -13,4 +13,12 @@ public class Polynomial {
         }
         return sum;
     }
+
+    public double computeHornersAlgorithm(double x){
+        double sum = 0;
+        for(int i = coeffs.size() - 1; i >= 0; i--){
+            sum += coeffs.get(i) + sum * x;
+        }
+        return sum;
+    }
 }
